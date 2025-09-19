@@ -1,1 +1,94 @@
 /* Your SCSS here. */
+
+.stripe {
+    background-color: rgb(209, 204, 214);
+}
+
+.container {
+    display:flex;
+    justify-content: center;
+    height: 40vh;
+}
+
+.icon {
+    height: 50%;
+    width: auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(109, 108, 108);
+    height: 7vh;
+    transition: height 0.4s, background-color 0.4s;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.main-nav img {
+    height: 5vh; 
+    width: auto;
+    transition: all 0.4s;
+}
+
+.main-nav li {
+    margin: 0 1vw; 
+}
+
+.main-nav a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none; 
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+.main-nav a:hover {
+    color: lightgray;
+}
+
+.main-nav.scrolled {
+    height: 5vh;
+}
+
+.main-nav.scrolled a {
+    font-size: 1rem;
+}
+
+.main-nav.scrolled img {
+    height: 4vh; 
+    width: auto;
+}
+
+.content-spacer {
+    height: 7vh;
+}
+
+.nav-item a {
+  padding: 1vh;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-item.active {
+  background-color: #080808;
+  padding: 1vh 0.5vw;
+}
+
+.nav-item {
+  transition: background-color 0.3s ease;
+}
