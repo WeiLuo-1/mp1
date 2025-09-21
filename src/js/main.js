@@ -54,3 +54,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+const carouselContainer = document.querySelector('.carousel-container');
+const slidesWrapper = document.querySelector('.slides-wrapper');
+const slides = document.querySelectorAll('.slide');
+const prevArrow = document.querySelector('.prev-arrow');
+const nextArrow = document.querySelector('.next-arrow');
+
+let currentSlide = 0; 
+
+function moveToSlide(index) {
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+
+    const newTransform = `translateX(-${currentSlide * slides[0].offsetWidth}px)`;
+    slidesWrapper.style.transform = newTransform;
+}
+
+nextArrow.addEventListener('click', () => {
+    moveToSlide(currentSlide + 1);
+});
+
+prevArrow.addEventListener('click', () => {
+    moveToSlide(currentSlide - 1);
+});
