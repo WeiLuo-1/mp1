@@ -84,3 +84,28 @@ nextArrow.addEventListener('click', () => {
 prevArrow.addEventListener('click', () => {
     moveToSlide(currentSlide - 1);
 });
+
+const openModalBtns = document.querySelectorAll('.modal-open-img');
+
+openModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const modalId = btn.id.replace('open-modal-btn-', 'my-modal-');
+        const modal = document.getElementById(modalId);
+        modal.classList.add('is-visible');
+    });
+});
+
+const closeBtns = document.querySelectorAll('.close-btn');
+
+closeBtns.forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+        const modal = closeBtn.closest('.modal');
+        modal.classList.remove('is-visible');
+    });
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+        event.target.classList.remove('is-visible');
+    }
+});

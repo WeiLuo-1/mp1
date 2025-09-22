@@ -5,23 +5,27 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/main.scss">
+        <script src="https://kit.fontawesome.com/7c4e88cf59.js" crossorigin="anonymous"></script>
         <title>MP1</title>
     </head>
     <body>
         <nav id="navbar" class="main-nav">
-            <img src="assets/portIcon.png">
+            <i class="fa-brands fa-weixin" style="color: white; font-size: 3vh;"></i>
             <ul>
                 <li class="nav-item"><a href="#portfolio-section">ABILITIES</a></li>
-                <li class="nav-item"><a href="#about-section">ABOUT</a></li>
-                <li class="nav-item"><a href="#contact-section">CONTACT</a></li>
+                <li class="nav-item"><a href="#about-section">TITLES</a></li>
+                <li class="nav-item"><a href="#contact-section">BACKGROUND</a></li>
             </ul>
         </nav>
 
         <div class="content-spacer"></div>
 
-        <div class="container stripe">
+        <div class="container stripe" style="display: flex; flex-direction: row; justify-content: space-between;">
             <img class="icon" src="assets/wukong.png">
             <h1>Sun Wukong</h1>
+            <video width="640" height="360" controls>
+                <source src="assets/sunwukong.mp4" type="video/mp4">
+            </video>
         </div>
 
         <section id="portfolio-section" class="container">
@@ -90,8 +94,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="prev-arrow"><span>&#10094;</span></button>
-                <button class="next-arrow"><span>&#10095;</span></button>
+                <button class="prev-arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="next-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
@@ -123,11 +131,73 @@
         </section>
 
         <section id="contact-section" class="container">
-            <h1>Contact</h1>
+            <div class="fixed-background-section">
+                <h2>Background</h2>
+                <p>Sun Wukong (Chinese: 孫悟空, Mandarin pronunciation: [swə́n ûkʰʊ́ŋ]), 
+                    also known as the Monkey King, is a literary and religious figure 
+                    best known as one of the main characters in the 16th-century Chinese 
+                    novel Journey to the West. In the novel, Sun Wukong is a monkey born 
+                    from a stone who acquires supernatural powers through Taoist practices. 
+                    After rebelling against heaven, he is imprisoned under a mountain by 
+                    the Buddha. Five hundred years later, he accompanies the monk Tang Sanzang 
+                    riding on the White Dragon Horse and two other disciples, Zhu Bajie and 
+                    Sha Wujing, on a journey to obtain Buddhist sutras, known as the West or 
+                    Western Paradise, where Buddha and his followers dwell.</p>
+            </div>
         </section>
 
-        <div class="footer container stripe">
+        <div class="container stripe">
+            <div class="modal-buttons-grid">
+                <img id="open-modal-btn-1" class="modal-open-img" src="assets/modal1.png" alt="Open Modal 1">
+                <img id="open-modal-btn-2" class="modal-open-img" src="assets/modal2.png" alt="Open Modal 2">
+                <img id="open-modal-btn-3" class="modal-open-img" src="assets/modal3.png" alt="Open Modal 3">
+                <img id="open-modal-btn-4" class="modal-open-img" src="assets/modal4.png" alt="Open Modal 4">
+                <img id="open-modal-btn-5" class="modal-open-img" src="assets/modal5.png" alt="Open Modal 5">
+                <img id="open-modal-btn-6" class="modal-open-img" src="assets/modal6.png" alt="Open Modal 6">
+            </div>
 
+            <div id="my-modal-1" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="assets/modal1.png">
+                </div>
+            </div>
+            <div id="my-modal-2" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="assets/modal2.png">
+                </div>
+            </div>
+            <div id="my-modal-3" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="assets/modal3.png">
+                </div>
+            </div>
+            <div id="my-modal-4" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="assets/modal4.png">
+                </div>
+            </div>
+            <div id="my-modal-5" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="assets/modal5.png">
+                </div>
+            </div>
+            <div id="my-modal-6" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <img src="assets/modal6.png">
+                </div>
+            </div>
         </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Sun Wukong. All Rights Reserved.</p>
+            </div>
+        </footer>
     </body>
 </html>
